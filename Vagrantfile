@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "juanmibox"
   config.vm.hostname = "despliegue"
   config.vm.provision "shell", path: "provision.sh"
-  config.vm.network :forwarded_port, guest: 80, host: 8080
-
+  config.vm.network :forwarded_port, guest: 80, host: 8081
+  # config.vm.synced_folder owner: "www-data" , group: "www-data" , mount_options: ["dmode=775,fmode=664"]
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
